@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.0.xsd">
+	<header>
+		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+		<title lang="en-gb">Evil Quick Reply</title>
+		<description lang="en-gb">This modification will add a hidden quick reply form to the bottom of the viewtopic page. It adds a "Quick reply" image next to "Post reply", that will display the quick reply form when clicked. The goal of this MOD is not to offer as many features as possible, it's built to be as simple as possible.</description>
+		<author-notes lang="en-gb"><![CDATA[There have been many Quick Reply MODs for phpBB2. I never found one that i really liked, because many were just too bloated (for my taste) and/or the code wasn't as simple as it could have been. So i made my own for my own forum, wich i never published.
+
+Then i decided that i'd make one for phpBB3 too. Right now there is one such MOD i know of, called "Quick Posting" by LEW21, wich is a really nice MOD, i must say. But i still believe that a quick reply should be simple. If somebody wants more options, he can click the "Post reply" image. This MOD still includes guest support though, so guests will have the possibility to enter their name and a confirmation code.
+
+Hope you find this MOD useful!
+
+This MOD used to be called "Simple Quick Reply", but the author of phpBB2's "Simple Quick Reply" asked me to let him use it, so i decided to call mine "Evil Quick Reply", which is kinda ironic, because by doing so i'm not being evil at all. :P
+
+Thanks to Highway of Life, WWay (prosilver) and Prince of phpBB (subsilver2) for the sweet quick reply icons!
+
+Don't forget to refresh the themes, templates and imagesets in the ACP after installation.]]></author-notes>
+		<author-group>
+			<author>
+				<realname>Igor Wiedler</realname>
+				<email>evil@phpbbmodders.net</email>
+				<username>eviL&lt;3</username>
+				<homepage>http://phpbbmodders.net</homepage>
+				<contributions />
+			</author>
+		</author-group>
+		<mod-version>
+			<major>1</major>
+			<minor>0</minor>
+			<revision>1</revision>
+		</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>300</time>
+			<target-version>
+				<target-primary>3.0.0</target-primary>
+				<target-major allow="exact">3</target-major>
+				<target-minor allow="exact">0</target-minor>
+			</target-version>
+		</installation>
+		<history>
+			<entry>
+				<date>2007-04-09</date>
+				<rev-version>
+					<major>0</major>
+					<minor>1</minor>
+					<revision>0</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Initial release</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-04-25</date>
+				<rev-version>
+					<major>0</major>
+					<minor>1</minor>
+					<revision>1</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Improved javascript (onload)</change>
+					<change>Added post subject option</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-05-22</date>
+				<rev-version>
+					<major>0</major>
+					<minor>1</minor>
+					<revision>2</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>RC1, prosilver xsl</change>
+					<change>Javascript resize for the textarea</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-05-23</date>
+				<rev-version>
+					<major>0</major>
+					<minor>1</minor>
+					<revision>3</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Prosilver template improvements</change>
+					<change>$display_subject = true; by default</change>
+					<change>Changed the config around a little (thanks for the suggestions, guys)</change>
+					<change>Save display status in a cookie</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-05-23</date>
+				<rev-version>
+					<major>0</major>
+					<minor>1</minor>
+					<revision>4</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Reduced install time</change>
+					<change>Fixed something in template (duplicate id attribute)</change>
+					<change>Added locked check (thanks damnian)</change>
+					<change>Added Re: Subject to the subject when hidden (thanks nickvergessen)</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-06-22</date>
+				<rev-version>
+					<major>0</major>
+					<minor>1</minor>
+					<revision>5</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Some more fixes</change>
+					<change>Renamed MOD to evil quick reply</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-06-30</date>
+				<rev-version>
+					<major>1</major>
+					<minor>0</minor>
+					<revision>0</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>New prosilver image by WWay</change>
+					<change>First RC of MOD, submitted to moddb</change>
+					<change>Moved style changes to /templates/</change>
+					<change>Fixed overflow for RC3</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-09-01</date>
+				<rev-version>
+					<major>1</major>
+					<minor>0</minor>
+					<revision>0</revision>
+					<release>a</release>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Some updates/fixes</change>
+					<change>Zomg addon!</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-10-14</date>
+				<rev-version>
+					<major>1</major>
+					<minor>0</minor>
+					<revision>0</revision>
+					<release>c</release>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Some updates/fixes</change>
+					<change>Updated for RC6</change>
+					<change>Zomg addon!</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2007-12-16</date>
+				<rev-version>
+					<major>1</major>
+					<minor>0</minor>
+					<revision>1</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Updated for phpBB 3.0.0 Gold!</change>
+				</changelog>
+			</entry>
+		</history>
+	</header>
+	<action-group>
+		<copy>
+			<file from="root/includes/functions_quick_reply.php" to="includes/functions_quick_reply.php" />
+		</copy>
+		<open src="viewtopic.php">
+			<edit>
+				<find>	'WARN_IMG'			=> $user->img('icon_user_warn', 'WARN_USER'),</find>
+				<action type="after-add"><![CDATA[//-- mod : Evil Quick Reply ------------------------------------------------------------
+//-- add
+	'QUICK_REPLY_IMG'	=> $user->img('button_quick_reply', 'QUICK_REPLY'),
+//-- fin mod : Evil Quick Reply --------------------------------------------------------]]></action>
+			</edit>
+			<edit>
+				<find>page_footer();</find>
+				<action type="before-add"><![CDATA[//-- mod : Evil Quick Reply ------------------------------------------------------------
+//-- add
+include($phpbb_root_path . 'includes/functions_quick_reply.' . $phpEx);
+quick_reply($topic_id, $forum_id, $topic_data);
+//-- fin mod : Evil Quick Reply --------------------------------------------------------]]></action>
+			</edit>
+		</open>
+		<open src="includes/acp/acp_language.php">
+			<edit>
+				<find><![CDATA[, 'button_topic_reply']]></find>
+				<inline-edit>
+				<inline-find><![CDATA[, 'button_topic_reply']]></inline-find>
+				<inline-action type="after-add"><![CDATA[, 'button_quick_reply']]></inline-action>
+		</inline-edit>
+			</edit>
+		</open>
+		<open src="includes/acp/acp_styles.php">
+			<edit>
+				<find><![CDATA[, 'button_topic_reply']]></find>
+				<inline-edit>
+				<inline-find><![CDATA[, 'button_topic_reply']]></inline-find>
+				<inline-action type="after-add"><![CDATA[, 'button_quick_reply']]></inline-action>
+		</inline-edit>
+			</edit>
+		</open>
+		<open src="language/en/common.php">
+			<edit>
+				<find><![CDATA[	'POST_REPLY'			=> 'Post a reply',]]></find>
+				<action type="after-add"><![CDATA[//-- mod : Evil Quick Reply ------------------------------------------------------------
+//-- add
+	'QUICK_REPLY'			=> 'Quick reply',
+//-- fin mod : Evil Quick Reply --------------------------------------------------------]]></action>
+			</edit>
+		</open>
+		<open src="language/en/acp/styles.php">
+			<edit>
+				<find><![CDATA[	'IMG_BUTTON_TOPIC_REPLY'	=> 'Reply topic',]]></find>
+				<action type="after-add"><![CDATA[//-- mod : Evil Quick Reply ------------------------------------------------------------
+//-- add
+	'IMG_BUTTON_QUICK_REPLY'	=> 'Quick reply',
+//-- fin mod : Evil Quick Reply --------------------------------------------------------]]></action>
+			</edit>
+		</open>
+	</action-group>
+</mod>

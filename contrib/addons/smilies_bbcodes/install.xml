@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="./../../../modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.0.xsd">
+	<header>
+		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+		<title lang="en-gb">Evil Quick Reply Addon: BBcodes and smilies</title>
+		<description lang="en-gb">This addon adds smilies and bbcodes to evil quick reply.</description>
+		<author-notes lang="en-gb"><![CDATA[]]></author-notes>
+		<author-group>
+			<author>
+				<realname>Igor Wiedler</realname>
+				<email>evil@phpbbmodders.net</email>
+				<username>eviL&lt;3</username>
+				<homepage>http://phpbbmodders.net</homepage>
+				<contributions />
+			</author>
+		</author-group>
+		<mod-version>
+			<major>1</major>
+			<minor>0</minor>
+			<revision>0</revision>
+		</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>300</time>
+			<target-version>
+				<target-primary>3.0.RC6</target-primary>
+				<target-major allow="exact">3</target-major>
+				<target-minor allow="exact">0</target-minor>
+			</target-version>
+		</installation>
+		<history>
+			<entry>
+				<date>2007-09-01</date>
+				<rev-version>
+					<major>1</major>
+					<minor>0</minor>
+					<revision>0</revision>
+				</rev-version>
+				<changelog lang="en-gb">
+					<change>Initial release</change>
+				</changelog>
+			</entry>
+		</history>
+	</header>
+	<action-group>
+		<open src="includes/functions_quick_reply.php">
+			<edit>
+				<find>'resize'</find>
+				<action type="after-add"><![CDATA[		'bbcodes'			=> isset($config['evil_qr_bbcodes']) ? $config['evil_qr_bbcodes'] : true,
+		'smilies'			=> isset($config['evil_qr_smilies']) ? $config['evil_qr_smilies'] : true,]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[}
+
+?>]]></find>
+				<action type="before-add"><![CDATA[	if ($qr_config['smilies'] || $qr_config['bbcodes'])
+	{
+		$user->add_lang('posting');
+		
+		if ($qr_config['smilies'])
+		{
+			include($phpbb_root_path . 'includes/functions_posting.' . $phpEx);
+			
+			generate_smilies('inline', $forum_id);
+			$template->assign_var('S_SMILIES_ALLOWED', true);
+		}
+		
+		if ($qr_config['bbcodes'])
+		{
+			$template->assign_var('S_BBCODE_ALLOWED', true);
+		}
+	}]]></action>
+			</edit>
+		</open>
+	</action-group>
+</mod>
