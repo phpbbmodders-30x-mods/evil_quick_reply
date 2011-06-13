@@ -236,5 +236,8 @@ quick_reply($topic_id, $forum_id, $topic_data);
 				<action type="after-add"><![CDATA[.quick-reply-icon span	{ background-image: url("{IMG_BUTTON_QUICK_REPLY_SRC}"); }]]></action>
 			</edit>
 		</open>
+		<diy-instructions lang="en"><![CDATA[*** NOTE: If you are installing via Automod you may skip to step 2 ***
+1. Make all edits to all files and upload them to your forum.    
+2. Refresh the prosilver/subsilver2 template and imageset cache.]]></diy-instructions>
 	</action-group>
 </mod>
